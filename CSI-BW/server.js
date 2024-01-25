@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
@@ -6,9 +7,10 @@ const articleRouter = require('./routes/articles')
 const methodOverride = require('method-override')
 const app = express()
 
-mongoose.connect('mongodb://localhost/blog', {
+mongoose.connect(process.env.MONGO_URI, {
   useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true
 })
+const PORT = 5000
 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
@@ -23,4 +25,7 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
-app.listen(5000)
+mongoose.connection.once('open',()=>{
+  console.log('Successfully connected to mongDB')
+  app.listen(PORT,()=> {console.log(`Server running on port ${PORT}`)})
+})
