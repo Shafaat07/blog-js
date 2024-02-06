@@ -1,7 +1,5 @@
 body{
-<<<<<<< HEAD
     background-color: rgb(79, 58, 58) !important;
-=======
     background-image: url("https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?w=740&t=st=1706792922~exp=1706793522~hmac=3c3544be15dd609710b81d503f9eb5265a3f6938ecb058dde4b9b624f80be0f4");
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -33,5 +31,4 @@ p{
 
 hr{
     background-color: white;
->>>>>>> 8ff478531dd94b04569b2887ec9cbab849282111
 }
