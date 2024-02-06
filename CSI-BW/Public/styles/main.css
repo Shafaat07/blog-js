@@ -1,3 +1,117 @@
 body{
-    background-color: aqua !important;
+    background-image: url("https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?w=740&t=st=1706792922~exp=1706793522~hmac=3c3544be15dd609710b81d503f9eb5265a3f6938ecb058dde4b9b624f80be0f4");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: rgb(8, 8, 32); */
+    /* padding-top: 100px; */
+}
+
+.container{
+    
+    padding-top: 30px;
+    background-color:rgba(10, 10, 10, 0.5);
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    
+}
+
+
+
+
+.navbar ul{
+    list-style-type: none; /* it is used to remove cirlcle disk square from the side of home contact etc*/
+    overflow: hidden; /*used to specify background color*/
+    margin: 0;
+    padding-top: 0;
+    background-color: rgb(10, 10, 10,0.5);
+    opacity: 1.5;
+    border-radius: 10px;
+    position: fixed;
+    padding-top: 5px;
+    top: 0;
+    border: 1px solid white;
+    z-index: 2;
+
+    
+ }
+ .navbar{
+    margin-top: 10px;
+ }
+.navbar  li{
+     float: left; /*it is used to set left navigation and arrange in a horizontal rather than vertical*/
+ }
+.navbar li a{
+ display:block;
+ width: fixed;
+ 
+ padding: 14px 20px;
+ /* background-color: aqua; */
+ color: white;
+ text-decoration: none;
+}
+.navbar li a:hover{
+ color: #000;
+    
+ background-color: rgb(230, 98, 98);
+ display: block;
+}
+h3{
+    color: gray;
+}
+.container hr{
+    border-color: white;
+}
+
+@media (width<399px) {
+    .container{
+        margin-top: 10px;
+    }
+}
+@media (width<379) {
+    .container{
+        margin-top: 30px;
+    }
+}
+@media (min-width:399px) and (max-width:599px) {
+    .container{
+        margin-top:40px
+    }
+}
+@media (min-width:405px) and (max-width:496px) {
+    .container{
+        margin-top:50px
+    }
+}
+
+
+
+
+/* ----------- 0 - 450px ----------- */
+@media screen 
+  and (max-width: 450px){
+}
+
+/* ----------- 450 - 650px ----------- */
+@media screen 
+  and (min-width: 451px) 
+  and (max-width: 650px){
+}
+
+/* ----------- 650px - 950px ----------- */
+@media screen 
+  and (min-width: 651px)
+  and (max-width: 950px){
+}
+
+/* ----------- 950px - 1200px ----------- */
+@media screen 
+  and (min-width: 951px) 
+  and (max-width: 1200px){
+}
+
+/* ----------- 1200px + ----------- */
+@media screen 
+  and (min-width: 1201px){
 }

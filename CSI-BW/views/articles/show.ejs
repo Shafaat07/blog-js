@@ -8,23 +8,37 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="/styles/readmore.css">
-  <title>Blog</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel|Fauna+One">
+  <link rel="icon" type="image/png" href="/styles/csi.png">
+  <title>ComputerSocietyChronicle</title>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="mb-1">
+   <div class="content">
+
+    <h1 class="mb-1" style="text-align: center; color: rgb(189, 211, 138);">
       <%= article.title %>
     </h1>
-    <div class="text-muted mb-2">
+    <div class="text-muted mb-2" style="text-align: center;">
       <%= article.createdAt.toLocaleDateString() %>
     </div>
-    <a href="/" class="btn btn-secondary">All Articles</a>
-    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
-
+    
+    
+    <hr>
+     
     <div>
       <%- article.sanitizedHtml %>
     </div>
+
+  </div> 
+  <div class="buttons">
+
+    <a href="/" class="btn btn-secondary">All Articles</a>
+    <a href="/articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+
+  </div>
+
   </div>
 </body>
 
