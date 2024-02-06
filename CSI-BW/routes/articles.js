@@ -2,6 +2,17 @@ const express = require('express')
 const Article = require('./../models/article')
 const router = express.Router()
 
+// Original route handling /about
+router.get('/about', (req, res) => {
+  res.render('articles/about', { article: new Article() });
+});
+
+// Modified route to redirect without involving the database
+router.get('/about', (req, res) => {
+  // Redirect the user to the '/about' section
+  res.redirect('/about');
+});
+//test
 router.get('/new', (req, res) => {
   res.render('articles/new', { article: new Article() })
 })

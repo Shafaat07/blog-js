@@ -1,3 +1,26 @@
 body{
+<<<<<<< HEAD
     background-color: rgb(255, 255, 255) !important;
 }
+=======
+    background-image: url("https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430879.jpg?w=740&t=st=1706792922~exp=1706793522~hmac=3c3544be15dd609710b81d503f9eb5265a3f6938ecb058dde4b9b624f80be0f4");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* background-color: rgb(8, 8, 32); */
+    padding-top: 100px;
+}
+.container{
+    padding-top: 20px;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding-bottom: 40px;
+    border-radius: 10px;
+    border: 1px solid white;
+    
+    
+    
+}
+h1{
+    color: white;
+}
+>>>>>>> 8ff478531dd94b04569b2887ec9cbab849282111
