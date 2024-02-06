@@ -8,30 +8,79 @@
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/main.css">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+  <link rel="icon" type="image/png" href="/styles/csi.png" >
+
+  
   <title>Blog</title>
 </head>
 
 <body>
+  
+  <div class="navbar">
+
+    <ul>
+      <li> <img src="/styles/csi.png" alt="csi_logo" style="height: 50px;"></li>
+      
+      <li>
+        <h3 style="font-family: 'Times New Roman', Times, serif; padding: 10px;">CSI-Chronicle</h3>
+      </li> 
+      <li>
+        <a href="/">Home</a>
+      </li>
+                                      
+       <li>
+        <a href="/articles/new">New-Article</a>
+       </li>
+      
+      
+       <li>
+        <a href="/articles/about">about </a>
+       </li>
+      
+       
+      
+    </ul>
+
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <!-- this is another container -->
+
   <div class="container">
-    <h1 class="mb-4">Blog Articles</h1>
-    <a href="/articles/new" class="btn btn-success">New Article</a>
+
+  
+    <h1 class="mb-4" style="color: gray;">Blog Articles</h1>
+    <hr>
+    
 
     <% articles.forEach(article=> { %>
       <div class="card mt-4">
         <div class="card-body">
-          <h4 class="card-title">
+          <h4 class="card-title" style="text-align: center; font-family: Garamond, serif; ">
             <%= article.title %>
           </h4>
-          <div class="card-subtitle text-muted mb-2">
+          <div class="card-subtitle text-muted mb-2" style="text-align:center; ">
             <%= article.createdAt.toLocaleDateString() %>
           </div>
-          <div class="card-text mb-2">
+          <hr>
+          
+      
+          <div class="card-text mb-2 bg-slate-700" style="background-color: gray; padding: 10px; border-radius: 5px; color: white;">
             <%= article.description %>
           </div>
-          <a href="articles/<%= article.slug %>" class="btn btn-primary">Read More</a>
-          <a href="articles/edit/<%= article.id %>" class="btn btn-info">Edit</a>
+          <br>
+          <a href="articles/<%= article.slug %>" class="btn btn-primary" style="border-radius:20px; background-color:rgb(71, 11, 11); border: 1px solid white; ">Read More</a>
+          <a href="articles/edit/<%= article.id %>" class="btn btn-info" style="border-radius: 20px; background-color: rgb(10, 78, 105);">Edit</a>
           <form action="/articles/<%= article.id %>?_method=DELETE" method="POST" class="d-inline">
-            <button type="submit" class="btn btn-danger">Delete</button>
+            <button type="submit" class="btn btn-danger" style="border-radius: 20px; background-color: rgb(167, 9, 9);">Delete</button>
           </form>
         </div>
       </div>

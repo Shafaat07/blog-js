@@ -8,17 +8,20 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" href="/styles/edit.css">
-  <title>Blog</title>
+  <link rel="icon" type="image/png" href="/styles/csi.png">
+  <title>ComputerSocietyChronicle</title>
 </head>
 
 <body>
   <div class="container">
-    <h1 class="mb-4">Edit Article</h1>
+    <h1 class="mb-4 " style="color: gray;">Edit Article</h1>
 
     <form action="/articles/<%= article.id %>?_method=PUT" method="POST">
       <%- include('_form_fields') %>
     </form>
+
   </div>
+  <div id="grad1"></div>
 </body>
 
 </html>
