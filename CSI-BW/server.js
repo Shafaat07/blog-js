@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI, {
 })
 const PORT = 5000
 
+//setting view enjine as ejs 
 app.set('view engine', 'ejs')
 app.use(express.urlencoded({ extended: false }))
 
@@ -25,7 +26,9 @@ app.get('/', async (req, res) => {
 
 app.use('/articles', articleRouter)
 
-mongoose.connection.once('open',()=>{
+
+//making sure connection is established with mongoDBCompass
+mongoose.connection.once('open', () => {
   console.log('Successfully connected to mongDB')
-  app.listen(PORT,()=> {console.log(`Server running on port ${PORT}`)})
+  app.listen(PORT, () => { console.log(`Server running on port ${PORT}`) })
 })

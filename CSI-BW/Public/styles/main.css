@@ -64,7 +64,13 @@ h3{
 .container hr{
     border-color: white;
 }
+.cb{
+    background-color: #353535;
+}
 
+.card-title{
+    color: rgb(189, 211, 138);
+}
 @media (width<399px) {
     .container{
         margin-top: 10px;

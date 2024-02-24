@@ -20,14 +20,14 @@ body{
 }
  */
 
-.container{
+/* .container{
     padding: 100px;
     background-color: rgb(32, 32, 65,0.5);
 
-}
+} */
 .profile1{
-
-    background-color:white;
+    color: aliceblue;
+    background-color:#353535;
     padding-top: 10px;
     text-align: center;
     width: 75%;
@@ -36,7 +36,8 @@ body{
     
 }
 .profile2{
-    background-color:white;
+    color: aliceblue;
+    background-color:#353535;
     padding-top: 10px;
     text-align: center;
     border-radius: 100px;
